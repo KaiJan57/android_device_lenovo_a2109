@@ -59,3 +59,5 @@ Some basic hardware info
 -Ambient light sensor: Solteam JSA1127	
 -Back camera: s5k5cag
 -Front camera: mt9m114
+
+Be sure to have this patched before building LineageOS: https://github.com/PJBrs/platform_frameworks_base/commit/97c0f56efd0c23c399439f76a2733d56491e2af1
