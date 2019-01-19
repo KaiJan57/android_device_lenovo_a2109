@@ -26,6 +26,6 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
 # Discard inherited values and use our own instead.
 PRODUCT_NAME := aosp_a2109
 PRODUCT_DEVICE := a2109
-PRODUCT_BRAND := Ideatab
+PRODUCT_BRAND := IdeaTab
 PRODUCT_MODEL := A2109A
 PRODUCT_MANUFACTURER := Lenovo

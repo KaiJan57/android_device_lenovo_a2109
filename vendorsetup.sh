@@ -20,4 +20,4 @@
 # In particular, you can add lunch options with the add_lunch_combo
 # function: add_lunch_combo generic-eng
 
-add_lunch_combo aosp_a2109-userdebug
+add_lunch_combo lineage_a2109-userdebug

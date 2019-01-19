@@ -1,4 +1,5 @@
-# Copyright (C) 2010 The Android Open Source Project
+# Copyright (C) 2014 The CyanogenMod Project
+# Copyright (C) 2017 The LineageOS Project
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -12,22 +13,28 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-#
-# This file is the build configuration for a full Android
-# build for grouper hardware. This cleanly combines a set of
-# device-specific aspects (drivers) with a device-agnostic
-# product configuration (apps).
-#
+# Release name
+PRODUCT_RELEASE_NAME := A2109
+
+# Boot animation
+TARGET_SCREEN_HEIGHT := 800
+TARGET_SCREEN_WIDTH := 1280
 
 # Inherit from those products. Most specific first.
-$(call inherit-product, device/lenovo/a2109/device_a2109.mk)
-# This is where we'd set a backup provider if we had one
-#$(call inherit-product, device/sample/products/backup_overlay.mk)
-$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base.mk)
+#$(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Discard inherited values and use our own instead.
-PRODUCT_NAME := full_a2109
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/cm/config/common_full_tablet_wifionly.mk)
+
+# Inherit from a2109 device
+$(call inherit-product, device/lenovo/a2109/full_a2109.mk)
+
+PRODUCT_NAME := lineage_a2109
 PRODUCT_DEVICE := a2109
 PRODUCT_BRAND := IdeaTab
-PRODUCT_MODEL := A2109A
 PRODUCT_MANUFACTURER := Lenovo
+PRODUCT_MODEL := A2109A
+
+TARGET_RESTRICT_VENDOR_FILES := false
+
+TARGET_CONTINUOUS_SPLASH_ENABLED := true
