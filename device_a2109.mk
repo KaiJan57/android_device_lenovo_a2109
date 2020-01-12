@@ -47,7 +47,8 @@ PRODUCT_PACKAGES += \
     audio.a2dp.default \
     audio.usb.default \
     audio.r_submix.default \
-    lights.kai
+    lights.kai \
+    sensors.kai
 
 # Camera HAL
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \

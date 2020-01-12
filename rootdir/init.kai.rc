@@ -25,7 +25,7 @@ on post-fs-data
 
     mkdir /data/misc/wminput 0776 system system
 
-    # change back to bluetooth from system
+    # Change back to bluetooth from system
     chown bluetooth net_bt_stack /data/misc/bluetooth
 
     # Set indication (checked by vold) that we have finished this action
@@ -65,6 +65,12 @@ on boot
 # didim
     chown system system /sys/class/graphics/fb0/device/smartdimmer/enable
     chown system system /sys/class/graphics/fb0/device/smartdimmer/aggressiveness
+
+# Change some sensor file permissions to make them
+# writable the sensors HAL
+    chown system system /sys/class/input/input0/device/pollrate_ms
+    chown system system /sys/class/input/input0/device/enable
+    chown system system /sys/class/input/input5/delay
 
 # Wiimote connect status
     write /data/misc/wminput/connected 0
