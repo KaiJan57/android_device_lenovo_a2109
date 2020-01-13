@@ -1,3 +1,14 @@
 [
-
+ {
+   "repository": "proprietary_vendor_lenovo",
+   "target_path": "vendor/lenovo/a2109"
+ },
+ {
+   "repository": "proprietary_vendor_nvidia",
+   "target_path": "vendor/nvidia"
+ },
+ {
+   "repository": "android_kernel_nvidia_tegra3",
+   "target_path": "kernel/nvidia/tegra3"
+ }
 ]
